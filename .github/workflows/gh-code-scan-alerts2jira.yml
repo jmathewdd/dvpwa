@@ -5,8 +5,10 @@ on:
     - cron: '*/5 * * * *'    # trigger synchronization every 10 minutes
 
 jobs:
-  test_job:
+  sync-alerts-jira:
     runs-on: ubuntu-latest
+    permissions:
+          issues: read
     steps:
       - name: Sync alerts to Jira issues
         uses: github/ghas-jira-integration@v1
