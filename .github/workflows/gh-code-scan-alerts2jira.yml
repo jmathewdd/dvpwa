@@ -9,7 +9,7 @@ jobs:
   sync-alerts-jira:
     runs-on: ubuntu-latest
     permissions:
-          issues: read
+          security-events: read
     steps:
       - name: Sync alerts to Jira issues
         uses: github/ghas-jira-integration@v1
